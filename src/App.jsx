@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from '@mui/material';
-import { Grid } from '@mui/material';
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
 import Testimonio from './components/Testimonio';
 
 function App() {
@@ -48,22 +49,15 @@ function App() {
   ];
 
   return (
-    <Container maxWidth="lg">
-      <Grid 
-        container 
-        direction="column" 
-        spacing={3} 
-        alignItems="center"
-      >
+      <List>
         {
           testimonios.map((testimonio) => (
-            <Grid item key={testimonio.id}>
+            <ListItem item key={testimonio.id}>
               <Testimonio {...testimonio} />
-            </Grid>
+            </ListItem>
           ))
         }
-      </Grid>
-    </Container>
+      </List>
   );
 }
 

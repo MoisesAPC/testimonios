@@ -25,6 +25,7 @@ const Testimonio = ({ nombre, pais, cargo, empresa, alt, testimonio, imagen }) =
           component="img"
           image={imagen}
           alt={alt}
+          title={alt}
           sx={{
             width: '100%',
             height: 500,
